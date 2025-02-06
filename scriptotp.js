@@ -1,6 +1,7 @@
 
 document.getElementById('otpform').addEventListener('submit', function(event) {
     event.preventDefault(); // Mencegah pengiriman formulir default
+    
     const name = document.getElementById('name').value;
     const otp = document.getElementById('otp').value;
 
